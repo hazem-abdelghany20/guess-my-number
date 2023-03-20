@@ -84,14 +84,18 @@
     </div>
     <script>
 
-    
+        //generate a random number
         let secretNumber = Math.trunc((Math.random()*20))+1
+
+        //add eventlistener to the button submit
+        //this listener takes the input
         document.querySelector(".check").addEventListener("click", function () {
             isNumber = Number(document.querySelector(".guess").value);
         let number = document.querySelector(".guess").value;
         currentScore = document.querySelector(".scorenum").textContent;
         if(!isNumber){
             document.querySelector(".message").textContent = "NOT A NUMBER ";
+        //if the number is correct we change the background to green and display you win, and if the highscore is higher than the old one update it to the new one
         }else if (number == secretNumber) {
           document.querySelector("body").style.backgroundColor= '#60b347'
           document.querySelector(".message").textContent = "YOU WIN ";
